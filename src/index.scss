@@ -1,0 +1,279 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+body {
+  min-height: 100vh;
+  width: 80vw;
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+  margin: 40px auto;
+  font-family: system-ui, sans-serif;
+  
+background: rgb(81,130,143);
+background: linear-gradient(34deg, rgba(81,130,143,1) 0%, rgba(72,134,168,1) 27%, rgba(254,227,227,1) 100%);
+}
+
+
+
+
+.container {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+  
+
+
+
+  button {
+    cursor: pointer;
+  }
+
+  h1 {
+
+    text-align: center;
+    width: 70vw;
+    font-size: 40px;
+    color: azure;
+    letter-spacing: 5px;
+    
+  }
+
+  .todoform {
+    display: flex;
+    gap: 10px;
+
+    input {
+      flex: 2;
+      border: none;
+      font-size: 1.5rem;
+      border-radius: 20px;
+      padding: 0.35em 0.55em;
+      width: 100%;
+      background-color: white;
+      caret-color: rgb(3, 4, 69);
+      height: 50px;
+
+    }
+
+    select {
+      flex: 0.5;
+      border: none;
+      font-size: 1rem;
+      border-radius: 20px;
+      width: 100%;
+      padding: 0 15px;
+      background-color: white;
+      height: 50px;
+      color: rgb(33, 30, 28);
+
+    }
+
+    button {
+
+      flex: 0.5;
+      max-width: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      font-size: 30px;
+      background-color: rgb(111, 85, 123);
+      color: rgb(228, 221, 221);
+      border-radius: 20px;
+      border: none;
+
+
+    }
+
+  }
+
+  .editBackground {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(71, 82, 103, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    .editform {
+      position: fixed;
+      width: 40vw;
+      top: 40vh;
+      left: 30vw;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+
+      input {
+        flex: 1;
+        border: none;
+        font-size: 1.5rem;
+        border-radius: 20px;
+        padding: 0.35em 0.55em;
+        width: 100%;
+        background-color: white;
+        caret-color: rgb(3, 4, 69);
+        height: 50px;
+
+      }
+
+      .editButtons {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0 auto;
+        gap: 20px;
+
+        .editselect {
+          width: 30vw;
+          border: none;
+          font-size: 1rem;
+          border-radius: 20px;
+          width: 100%;
+          background-color: white;
+          height: 30px;
+          color: rgb(33, 30, 28);
+
+        }
+
+        .btn {
+          width: 30vw;
+          height: 35px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0 auto;
+          font-size: 20px;
+          background-color: rgb(18, 54, 69);
+          color: rgb(228, 221, 221);
+          border-radius: 20px;
+          border: none;
+
+          &:hover {
+            background-color: rgb(55, 151, 192);
+
+            height: 40px;
+          }
+        }
+
+      }
+
+
+
+
+
+    }
+  }
+
+
+  .filterButton {
+
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    gap: 10px;
+    padding: 50px 0 20px;
+
+    button {
+      flex: 1;
+      max-width: 200px;
+      height: 30px;
+      background-color: rgb(42, 80, 97);
+      color: rgb(228, 221, 221);
+      border-radius: 20px;
+      border: none;
+      
+      
+    }
+    .selected {  box-shadow: 10px 8px 2px 1px rgba(58, 58, 138, 0.2);
+    height: 40px;}
+
+
+  }
+
+  .taskList {
+    display: flex; 
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+    gap: 20px;
+
+    li {
+
+      flex: 0.3;
+      background-color: rgb(227, 243, 248);
+      display: flex;
+      flex-direction: column;
+      min-width: 300px;
+      height: 200px;
+      border-radius: 20px;
+
+      justify-content: space-around;
+      list-style: none;
+      box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+      p {
+        font-size: 1.5rem;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        width: 80%;
+        align-self: center;
+      }
+
+      .itemButton {
+        display: flex;
+        justify-content: space-around;
+        padding: 0 20x;
+    
+button{
+      padding: 8px 10px;
+      background-color: rgb(252, 255, 255);
+      color: rgb(78, 71, 71);
+      border-radius: 5px;
+      border: none;
+
+      &:hover{
+        border: 1px gray solid;
+      }
+    }
+
+         
+    
+      }
+
+
+    }
+
+    .underline {
+      text-decoration: line-through;
+
+    }
+
+  }
+
+  .bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    gap:20px;
+    color: white;
+    padding-top: 100px;
+    opacity: 0.5;
+
+  }
+
+
+}
+
+ 
